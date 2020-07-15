@@ -14,6 +14,46 @@
       <title>Le 2 ROMs</title>
    </head>
    <body>
+     <script>
+     // AncientOS
+    const urlAncientOS =
+        "https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/AncientOS/stats/json?start_date=2020-01-01&end_date=2021-01-01";
+    async function getAncientOSData() {
+        const response5 = await fetch(urlAncientOS);
+        const data5 = await response5.json();
+        let total = data5.total;
+        const span = document.querySelector(".AncientOSs2download")
+        span.innerHTML = `Скачиваний | ${(total)}`;
+
+    }
+    // ProjectSakura
+   const urlProjectSakura =
+       "https://sourceforge.net/projects/projectsakura/files/s2/stats/json?start_date=2020-01-01&end_date=2021-01-01";
+   async function getProjectSakuraData() {
+       const response5 = await fetch(urlProjectSakura);
+       const data5 = await response5.json();
+       let total = data5.total;
+       const span = document.querySelector(".ProjectSakuras2download")
+       span.innerHTML = `Скачиваний | ${(total)}`;
+
+   }
+   // ProjectSakura
+  const urlCarbonROM =
+      "https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/CarbonROM/stats/json?start_date=2020-01-01&end_date=2021-01-01";
+  async function getCarbonROMData() {
+      const response5 = await fetch(urlCarbonROM);
+      const data5 = await response5.json();
+      let total = data5.total;
+      const span = document.querySelector(".CarbonROMs2download")
+      span.innerHTML = `Скачиваний | ${(total)}`;
+
+  }
+    getAncientOSData();
+    getProjectSakuraData();
+    getCarbonROMData();
+      </script>
+
+
       <div class="headdiv">
          <!-- НавБар -->
          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -43,6 +83,7 @@
                      Android | 10<br>
                      GApps  | Есть оба варианта<br>
                      Статус | Неофициальный<br>
+                     <p class="AncientOSs2download"></p>
                   </p>
                   <a href="https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/AncientOS/" class="btn btn-warning center">SourceForge</a>
                </div>
@@ -55,6 +96,7 @@
                      Android | 10<br>
                      GApps  | Нету<br>
                      Статус  | Официальный<br>
+                     <p class="ProjectSakuras2download"></p>
                   </p>
                   <a href="https://sourceforge.net/projects/projectsakura/files/s2/" class="btn btn-warning center">SourceForge</a>
                </div>
@@ -67,6 +109,7 @@
                      Android | 10<br>
                      GApps  | Нету<br>
                      Статус  | Неофициальный<br>
+                     <p class="CarbonROMs2download"></p>
                   </p>
                   <a href="https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/CarbonROM/" class="btn btn-warning center">SourceForge</a>
                </div>
