@@ -1,3 +1,16 @@
 .round_brand {
   border-radius: 100px;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:  center;
+
+}
+.headdiv
+{
+  height: 90vh;
+  top: 50%;
+  left: 50%; 
+}
