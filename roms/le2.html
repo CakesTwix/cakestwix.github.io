@@ -37,7 +37,7 @@
        span.innerHTML = `Скачиваний | ${(total)}`;
 
    }
-   // ProjectSakura
+   // CarbonROM
   const urlCarbonROM =
       "https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/CarbonROM/stats/json?start_date=2020-01-01&end_date=2021-01-01";
   async function getCarbonROMData() {
@@ -48,9 +48,54 @@
       span.innerHTML = `Скачиваний | ${(total)}`;
 
   }
+  // PE10Plus
+ const urlPE10Plus =
+     "https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/PixelExpierence10-Plus/stats/json?start_date=2020-01-01&end_date=2021-01-01";
+ async function getPE10PlusData() {
+     const response5 = await fetch(urlPE10Plus);
+     const data5 = await response5.json();
+     let total = data5.total;
+     const span = document.querySelector(".PE10Pluss2download")
+     span.innerHTML = `Скачиваний | ${(total)}`;
+
+ }
+ // Magma
+const urlMagma =
+    "https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/Magma-Moonshine/stats/json?start_date=2020-01-01&end_date=2021-01-01";
+async function getMagmaData() {
+    const response5 = await fetch(urlMagma);
+    const data5 = await response5.json();
+    let total = data5.total;
+    const span = document.querySelector(".Magmas2download")
+    span.innerHTML = `Скачиваний | ${(total)}`;
+}
+// Magma
+const urlcrDroid =
+   "https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/crDroid/stats/json?start_date=2020-01-01&end_date=2021-01-01";
+async function getcrDroidData() {
+   const response5 = await fetch(urlcrDroid);
+   const data5 = await response5.json();
+   let total = data5.total;
+   const span = document.querySelector(".crDroids2download")
+   span.innerHTML = `Скачиваний | ${(total)}`;
+}
+// ZenX-OS
+const urlZenX =
+   "https://sourceforge.net/projects/zenx-os/files/s2/stats/json?start_date=2020-01-01&end_date=2021-01-01";
+async function getZenXData() {
+   const response5 = await fetch(urlZenX);
+   const data5 = await response5.json();
+   let total = data5.total;
+   const span = document.querySelector(".ZenXs2download")
+   span.innerHTML = `Скачиваний | ${(total)}`;
+}
     getAncientOSData();
     getProjectSakuraData();
     getCarbonROMData();
+    getPE10PlusData();
+    getMagmaData();
+    getcrDroidData();
+    getZenXData();
       </script>
       <div class="headdiv">
          <!-- НавБар -->
@@ -86,6 +131,7 @@
                   <a href="https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/AncientOS/" class="btn btn-warning center downloadd">SourceForge</a>
                </div>
             </div>
+
             <div class="card  cart">
                <img src="icon/projectsakura.png" class="card-img-top center imgg" alt="..." style="height: 100px;">
                <div class="card-body">
@@ -99,6 +145,7 @@
                   <a href="https://sourceforge.net/projects/projectsakura/files/s2/" class="btn btn-warning center downloadd">SourceForge</a>
                </div>
             </div>
+
             <div class="card  cart">
                <img src="icon/carbonrom.png" class="card-img-top center imgg" alt="..." style="height: 100px;">
                <div class="card-body">
@@ -110,6 +157,62 @@
                      <p class="CarbonROMs2download">Loading...</p>
                   </p>
                   <a href="https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/CarbonROM/" class="btn btn-warning center downloadd">SourceForge</a>
+               </div>
+            </div>
+
+            <div class="card  cart">
+               <img src="icon/pixelexperience.png" class="card-img-top center imgg" alt="..." style="height: 100px;">
+               <div class="card-body">
+                  <h5 class="card-title center">PE 10 Plus</h5>
+                  <p class="card-text">
+                     Android | 10<br>
+                     GApps  | Есть<br>
+                     Статус  | Неофициальный<br>
+                     <p class="PE10Pluss2download">Loading...</p>
+                  </p>
+                  <a href="https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/PixelExpierence10-Plus/" class="btn btn-warning center downloadd">SourceForge</a>
+               </div>
+            </div>
+
+            <div class="card  cart">
+               <img src="icon/magma.png" class="card-img-top center imgg" alt="..." style="height: 100px;">
+               <div class="card-body">
+                  <h5 class="card-title center">Magma-Moonshine</h5>
+                  <p class="card-text">
+                     Android | 10<br>
+                     GApps  | Нету<br>
+                     Статус  | Неофициальный<br>
+                     <p class="Magmas2download">Loading...</p>
+                  </p>
+                  <a href="https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/PixelExpierence10-Plus/" class="btn btn-warning center downloadd">SourceForge</a>
+               </div>
+            </div>
+
+            <div class="card  cart">
+               <img src="icon/crdroid.png" class="card-img-top center imgg" alt="..." style="height: 100px;">
+               <div class="card-body">
+                  <h5 class="card-title center">crDroid</h5>
+                  <p class="card-text">
+                     Android | 10<br>
+                     GApps  | Нету<br>
+                     Статус  | Неофициальный<br>
+                     <p class="crDroids2download">Loading...</p>
+                  </p>
+                  <a href="https://sourceforge.net/projects/cakestwix-s-roms-le-2/files/crDroid/" class="btn btn-warning center downloadd">SourceForge</a>
+               </div>
+            </div>
+
+            <div class="card  cart">
+               <img src="icon/zenx.png" class="card-img-top center imgg" alt="..." style="height: 100px;">
+               <div class="card-body">
+                  <h5 class="card-title center">ZenX-OS</h5>
+                  <p class="card-text">
+                     Android | 10<br>
+                     GApps  | Нету<br>
+                     Статус  | Неофициальный<br>
+                     <p class="ZenXs2download">Loading...</p>
+                  </p>
+                  <a href="https://sourceforge.net/projects/zenx-os/files/s2/" class="btn btn-warning center downloadd">SourceForge</a>
                </div>
             </div>
          </div>
