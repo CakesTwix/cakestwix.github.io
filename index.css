@@ -16,10 +16,15 @@
 }
 /*Шапка*/
 .nafff {
+  opacity: .3;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 0 0 25px 25px;
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+/*Эффект при наведении*/
+.nafff:hover {
+  opacity: .9;
 }
 /*Блок аватарки*/
 .circull {
@@ -28,4 +33,22 @@
   padding-left: 5px;
   border-radius: 25px;
   transform: translateX(-8px);
+}
+body {
+    padding:0;
+    margin:0;
+    overflow:hidden;
+	height: 600px;
+}
+canvas {
+    padding:0;
+    margin:0;
+}
+div.btnbg {
+    position:fixed;
+    left:0;
+    top:0;
+}
+.transition {
+  transition: 3s;
 }
